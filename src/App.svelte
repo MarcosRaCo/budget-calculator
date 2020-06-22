@@ -5,4 +5,5 @@ import Title from './Title.svelte';
 </script>
 
 <Navbar />
-<Title />
+<Title let title="add expense"/>
+<Title let title="Expense list"/>
