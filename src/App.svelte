@@ -1,4 +1,3 @@
-<!-- <script> </script> -->
 <script>
 // components
 import Navbar from './Navbar.svelte';
@@ -8,9 +7,15 @@ import expensesData from '../public/expenses';
 
 // variables 
 let expenses = [...expensesData];
+
+//funtions
+function removeExpense(id) {
+    expenses = expenses.filter(item => item.id !== id);
+
+}
 </script>
 
 <Navbar />
 <main class="content">
-    <ExpensesList expenses={expenses}/>
+    <ExpensesList {expenses} {removeExpense}/>
 </main>
